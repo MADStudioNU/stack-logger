@@ -1,0 +1,50 @@
+{
+  "name": "stack-logger",
+  "version": "1.0.0",
+  "description": "Easily build up a log trail while writing modules.",
+  "main": "src",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmlc/stack-logger.git"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "stack-logger",
+    "stacklogger"
+  ],
+  "author": "Jordan Timmerman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmlc/stack-logger/issues"
+  },
+  "homepage": "https://github.com/mmlc/stack-logger#readme",
+  "dependencies": {
+    "classy-js": "^1.0.8"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.6",
+    "immutable-stack": "^1.0.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-diff-reporter": "^0.3.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "object-extend": "^0.5.0",
+    "phantomjs": "^1.9.18",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  }
+}
