@@ -1,7 +1,7 @@
 var Classy         = require('classy-js')
   , ImmutableStack = require('immutable-stack')
 
-var StackLoggerBase = Classy(3, function (self, logLevel, pushMessages, messageStack) {
+var StackLoggerBase = Classy(function (self, logLevel, pushMessages, messageStack) {
 
   var messageStack = messageStack || ImmutableStack()
 

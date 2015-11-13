@@ -1,6 +1,6 @@
 {
   "name": "stack-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily build up a log trail while writing modules.",
   "main": "src",
   "directories": {
@@ -26,14 +26,14 @@
   },
   "homepage": "https://github.com/mmlc/stack-logger#readme",
   "dependencies": {
-    "classy-js": "^1.0.8"
+    "classy-js": "^2.0.4",
+    "immutable-stack": "^1.0.1"
   },
   "devDependencies": {
     "browserify": "^11.2.0",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
-    "immutable-stack": "^1.0.0",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.10",
     "karma-chrome-launcher": "^0.2.0",
