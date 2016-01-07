@@ -36,7 +36,7 @@ StackLoggerBase.__processMessages__ = function (messages) {
 }
 
 StackLoggerBase.__outputFn__ = function (level) {
-  return console[level]
+  return console[level].bind(console)
 }
 
 function __outputToConsole__ (level, messages) {
