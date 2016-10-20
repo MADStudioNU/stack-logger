@@ -3,10 +3,10 @@ var StackLogger = require('src')
 describe('stack-logger', function () {
 
   beforeAll(function () {
-    StackLogger.__setOutputFn__(function () {
+    StackLogger.__setOutputFn__(function (level) {
       // NOTE(jordan): return instead of calling out to `console`
-      return function (messages) {
-        return messages
+      return function (messages, lastMessage) {
+        return messages + (lastMessage ? lastMessage : '')
       }
     })
   })
@@ -27,7 +27,7 @@ describe('stack-logger', function () {
   it('can be initalized with its first message', function () {
     var _logger = StackLogger.Log('Hello', 'World')
 
-    expect(_logger.log()).toEqual('Hello World')
+    expect(_logger.log()).toEqual('Hello World\n\t')
   })
 
   it('has immutable push', function () {
@@ -49,9 +49,9 @@ describe('stack-logger', function () {
       .push('This should be indented.')
 
     var logs = [ 'Hello there', 'sir!', 'This should be indented.' ]
-      , expectedLongLog = logs.join('\n\t')
-      , expectedPopLog  = logs.slice(0, 2).join('\n\t')
-      , expected2PopLog = logs[0]
+      , expectedLongLog = logs.join('\n\t') + '\n\t'
+      , expectedPopLog  = logs.slice(0, 2).join('\n\t') + '\n\t'
+      , expected2PopLog = logs[0] + '\n\t'
 
     expect(longLogger.log()).toEqual(expectedLongLog)
     expect(longLogger.pop().log()).toEqual(expectedPopLog)
