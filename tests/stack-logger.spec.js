@@ -1,4 +1,4 @@
-var StackLogger = require('src')
+var StackLogger = require('..')
 
 describe('stack-logger', function () {
 
